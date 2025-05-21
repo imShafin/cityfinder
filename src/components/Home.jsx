@@ -1,10 +1,12 @@
-import { useEffect } from 'react';
-import { useTheme } from "../contexts/ThemeContext.jsx";
+import { useContext, useEffect } from 'react';
+import { ThemeContext, useTheme } from "../contexts/ThemeContext.jsx";
 import { FaSun, FaMoon } from 'react-icons/fa';
 
 
 function Home() {
   const { darkMode, toggleThemeMode } = useTheme();
+  const context = useContext(ThemeContext);
+  console.log(context);
   
   useEffect(() => {
     document.body.className = darkMode ? 'dark' : 'light';

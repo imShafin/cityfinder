@@ -2,6 +2,8 @@ import { useState } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import Search from "../Search";
 import { DATA, CountryCode } from "../../const";
+import Clock from '../Clock/Clock';
+
 
 function WorldMap() {
   const [highlightedCountry, setHighlightedCountry] = useState("");
@@ -14,6 +16,7 @@ function WorldMap() {
   //console.log(highlightedCountry);
 
   return (
+    <>
     <div className="container-fluid my-4">
       <div className="row">
         <div className="col-lg-6 col-12 ms-5 mb-4 mb-lg-0">
@@ -65,6 +68,8 @@ function WorldMap() {
         </div>
       </div>
     </div>
+    <Clock onSearch={highlightedCountry} />
+    </>
   );
 }
 
