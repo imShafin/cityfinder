@@ -14,6 +14,7 @@ export const ThemeProvider = ({ children }) => {
     return (
         <ThemeContext.Provider value={value}>
             {children}
+            {console.log(value)}
         </ThemeContext.Provider>
     )
 }

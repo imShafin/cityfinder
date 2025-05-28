@@ -38,7 +38,7 @@ function WorldMap() {
                           }
                           stroke="#000000"
                           strokeWidth={
-                            highlightedCountry === geo.properties.name ? 2 : 0.5
+                            highlightedCountry === geo.properties.name ? 1 : 0.5
                           }
                           style={{
                             hover: {
